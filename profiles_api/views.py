@@ -30,3 +30,15 @@ class HelloAPIView(APIView):
         else:
             return  Response( serializer.errors,
                 status = 400)
+
+    def put(self, request, pk=None):
+        """Handle updating an update"""
+        return Response({"method":"PUT"})
+
+    def patch(self, request, pk=None):
+        """Handles a partial update of an object"""
+        return Response({"method": "PATCH"})
+
+    def delete(self, request, pk=None):
+        """Deletes an object"""
+        return Response({"message": "delete"})
